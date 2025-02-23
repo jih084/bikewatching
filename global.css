@@ -1,0 +1,27 @@
+body {
+    font: 100%/1.5 system-ui, sans-serif;
+    display: flex;
+    flex-flow: column;
+    max-width: 80em;
+    min-height: 100vh;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 1em;
+  }
+
+#map svg {
+position: absolute;   /* Required for z-index */
+z-index: 1;           /* Places it above the map */
+width: 100%;          /* Fill the map container */
+height: 100%;         /* Fill the map container */
+pointer-events: none; /* Allow map interactions through the SVG */
+}
+
+#map svg circle {
+    fill: steelblue;
+    fill-opacity: 0.6; /* Make overlapping circles more visible */
+    stroke: white;
+    stroke-width: 1.5px;
+    pointer-events: auto; /* Enable tooltips */
+  }
+  
